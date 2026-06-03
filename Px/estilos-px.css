@@ -15,19 +15,6 @@ header {
     background-color: #e6e6f7;
 }
 
-header .logo {
-    width: 70px;
-    height: 70px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-header h1 {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-}
-
 nav {
     height: 60px;
     display: flex;
