@@ -76,7 +76,7 @@ main .caja-imagenes {
 }
 
 main .caja-imagenes article {
-    margin: 0 0 25px 0;
+    margin: 25px;
 }
 
 main .caja-imagenes img {
