@@ -11,8 +11,17 @@ body {
 
 header {
     height: 120px;
-    line-height: 120px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
     background-color: #e6e6f7;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
 }
 
 nav {
@@ -38,7 +47,6 @@ nav .boton {
 }
 
 .nav-5 .boton {
-    flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 241px;
 }
@@ -46,20 +54,47 @@ nav .boton {
 .cuerpo {
     min-height: 520px;
     background-color: #eef4ee;
+    display: flex;
 }
 
 aside {
-    float: left;
     width: 170px;
     padding: 20px 15px;
+    flex-shrink: 0;
 }
 
 aside .titulo-menu {
     text-align: center;
+    font-size: 16px;
+    margin: 0 0 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #7070c0;
+    color: #7070c0;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 6px;
+}
+
+aside ul li {
+    padding: 8px 10px;
+    background-color: #dceaf7;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+aside ul li:hover {
+    background-color: #7070c0;
+    color: #ffffff;
 }
 
 main {
-    margin-left: 200px;
+    width: 1000px;
     background-color: #ffffff;
 }
 
@@ -86,22 +121,32 @@ main .caja-imagenes img {
 }
 
 footer {
-    clear: both;
     height: 80px;
     line-height: 80px;
     text-align: center;
     background-color: #e6e6f7;
 }
 
+/* Media query para pantallas menores de 1200px (portátiles y tablets en apaisado):
+   El contenedor abandona el ancho fijo de 1200px y pasa a ocupar el 100% del
+   viewport, evitando que la página quede cortada o aparezca barra de scroll horizontal. */
 @media (max-width: 1200px) {
     .contenedor {
         width: 100%;
     }
 }
 
+/* Media query para pantallas menores de 768px (tablets en vertical y móviles):
+   El cuerpo pasa de fila a columna para que aside y main se apilen verticalmente,
+   evitando que el aside ocupe espacio lateral en pantallas estrechas. */
 @media (max-width: 768px) {
+    .cuerpo {
+        flex-direction: column;
+    }
 
-    main {
-        margin-left: 0;
+    aside {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
     }
 }

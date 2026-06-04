@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web en PX - 4 botones</title>
+    <title>Mi Web en PX - 4 botones</title>
+    <!--
+        EXPLICACIÓN FLEX — NAV con 4 botones (nav-4)
+        Todos los botones parten del mismo flex-basis: 241px.
+        4 × 241px = 964px, que es menor que el contenedor (1200px).
+        Espacio sobrante: 1200 - 964 = 236px.
+
+        flex-grow determina cuánto del sobrante recibe cada caja:
+          · "Inicio": flex-grow 3  → recibe 3/6 del sobrante = 118px → ancho final ≈ 359px
+          · Resto (×3): flex-grow 1 cada una → reciben 1/6 = ≈39px → ancho final ≈ 280px
+
+        Resultado: los 4 botones llenan el nav sin desbordarlo.
+        Al pulsar "Inicio" se navega a index2.html, donde aparece el botón "Contacto".
+    -->
     <link rel="stylesheet" href="estilos-px.css">
 </head>
 <body>
     <div class="contenedor">
         <header>
-            <div class="logo"></div>
-            <h1>Mi Sitio Web</h1>
+            <img class="logo" src="imagenes/material.png" alt="Logo">
+            <h1>Mi Web</h1>
         </header>
 
         <nav class="nav-4">
-            <a href="index5-px.html" class="boton inicio">Inicio</a>
+            <a href="index2.html" class="boton inicio">Inicio</a>
             <a href="#" class="boton">Nosotros</a>
             <a href="#" class="boton">Servicios</a>
             <a href="#" class="boton">Productos</a>
@@ -52,7 +65,7 @@
             </main>
         </div>
         <footer>
-            2024 Mi Sitio Web — Todos los derechos reservados.
+            © 2024 Mi Sitio Web -- Todos los derechos reservados.
         </footer>
     </div>
 </body>
