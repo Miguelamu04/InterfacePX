@@ -39,7 +39,7 @@ nav .boton {
 .nav-4 .boton {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 241px; /* 4×241=964px < 1200px (caben) / 5×241=1205px > 1200px (no caben) */
+    flex-basis: 241px; /* 4×241=964px caben / 5×241=1205px no caben */
 }
 
 .nav-4 .boton.inicio {
@@ -48,7 +48,7 @@ nav .boton {
 
 .nav-5 .boton {
     flex-shrink: 1;
-    flex-basis: 241px; /* misma medida inicial que nav-4 */
+    flex-basis: 241px; /* Misma medida inicial que nav-4 */
 }
 
 .cuerpo {
@@ -84,7 +84,6 @@ aside ul {
 aside ul li {
     padding: 8px 10px;
     background-color: #dceaf7;
-    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -105,7 +104,7 @@ main .caja-texto {
 }
 
 main .caja-imagenes {
-    margin-left: 490px; /* 455 + 25 + 10 = 490px (ancho total de caja-texto) */
+    margin-left: 490px; /* Ancho total de caja-texto */
     width: 460px; /* 510 - 25 - 25 = 460px */
     padding: 25px;
 }
@@ -127,17 +126,14 @@ footer {
     background-color: #e6e6f7;
 }
 
-/* Media query para pantallas menores de 1200px (portátiles y tablets en apaisado):
-   El contenedor quita el ancho fijo de 1200px y pasa a ocupar el 100% del
-   viewport*/
+/* Pantallas menores de 1200px: el contenedor pasa a ocupar el 100% del viewport */
 @media (max-width: 1200px) {
     .contenedor {
         width: 100%;
     }
 }
 
-/* Media query para pantallas menores de 768px (tablets en vertical y móviles):
-   El cuerpo pasa de fila a columna para que aside y main se apilen verticalmente*/
+/* Pantallas menores de 768px: aside y main pasan a columna */
 @media (max-width: 768px) {
     .cuerpo {
         flex-direction: column;
