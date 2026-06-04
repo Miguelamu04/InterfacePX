@@ -4,19 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Web en PX - 5 botones</title>
-    <!--
-        EXPLICACIÓN FLEX — NAV con 5 botones (nav-5)
-        Todos los botones parten del mismo flex-basis: 241px.
-        5 × 241px = 1205px, que es mayor que el contenedor (1200px).
-        Espacio en déficit: 1205 - 1200 = 5px.
-
-        flex-shrink: 1 en todos los botones → el déficit se reparte igual entre los 5:
-          · Cada botón encoge 1px → ancho final: 240px por botón.
-          · 5 × 240px = 1200px: encajan exactamente en el contenedor.
-
-        Resultado: los 5 botones caben ajustados sin desbordar el nav.
-        Al pulsar "Inicio" se vuelve a index.html (la versión con 4 botones).
-    -->
     <link rel="stylesheet" href="estilos-px.css">
 </head>
 <body>
@@ -25,6 +12,19 @@
             <img class="logo" src="imagenes/material.png" alt="Logo">
             <h1>Mi Web</h1>
         </header>
+        <!--
+            EXPLICACIÓN FLEX — NAV con 5 botones (nav-5)
+            Todos los botones parten del mismo flex-basis: 241px.
+            5 × 241px = 1205px, que es mayor que el contenedor (1200px).
+            Espacio en déficit: 1205 - 1200 = 5px.
+
+            flex-shrink: 1 en todos los botones → el déficit se reparte igual entre los 5:
+              · Cada botón encoge 1px → ancho final: 240px por botón.
+              · 5 × 240px = 1200px: encajan exactamente en el contenedor.
+
+            Resultado: los 5 botones caben ajustados sin desbordar el nav.
+            Al pulsar "Inicio" se vuelve a index.html (la versión con 4 botones).
+        -->
         <nav class="nav-5">
             <a href="index.html" class="boton inicio">Inicio</a>
             <a href="#" class="boton">Nosotros</a>

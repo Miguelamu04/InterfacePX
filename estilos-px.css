@@ -39,7 +39,7 @@ nav .boton {
 .nav-4 .boton {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 241px;
+    flex-basis: 241px; /* 4×241=964px < 1200px (caben) / 5×241=1205px > 1200px (no caben) */
 }
 
 .nav-4 .boton.inicio {
@@ -48,7 +48,7 @@ nav .boton {
 
 .nav-5 .boton {
     flex-shrink: 1;
-    flex-basis: 241px;
+    flex-basis: 241px; /* misma medida inicial que nav-4 */
 }
 
 .cuerpo {
@@ -58,7 +58,7 @@ nav .boton {
 }
 
 aside {
-    width: 170px;
+    width: 170px; /* 200 - 15 - 15 = 170px */
     padding: 20px 15px;
     flex-shrink: 0;
 }
@@ -94,19 +94,19 @@ aside ul li:hover {
 }
 
 main {
-    width: 1000px;
+    width: 1000px; /* 1200 - 200 = 1000px */
     background-color: #ffffff;
 }
 
 main .caja-texto {
     float: left;
-    width: 455px;
+    width: 455px; /* 490 - 25 - 10 = 455px */
     padding: 25px 10px 25px 25px;
 }
 
 main .caja-imagenes {
-    margin-left: 490px;
-    width: 460px;
+    margin-left: 490px; /* 455 + 25 + 10 = 490px (ancho total de caja-texto) */
+    width: 460px; /* 510 - 25 - 25 = 460px */
     padding: 25px;
 }
 
@@ -128,8 +128,8 @@ footer {
 }
 
 /* Media query para pantallas menores de 1200px (portátiles y tablets en apaisado):
-   El contenedor abandona el ancho fijo de 1200px y pasa a ocupar el 100% del
-   viewport, evitando que la página quede cortada o aparezca barra de scroll horizontal. */
+   El contenedor quita el ancho fijo de 1200px y pasa a ocupar el 100% del
+   viewport*/
 @media (max-width: 1200px) {
     .contenedor {
         width: 100%;
@@ -137,8 +137,7 @@ footer {
 }
 
 /* Media query para pantallas menores de 768px (tablets en vertical y móviles):
-   El cuerpo pasa de fila a columna para que aside y main se apilen verticalmente,
-   evitando que el aside ocupe espacio lateral en pantallas estrechas. */
+   El cuerpo pasa de fila a columna para que aside y main se apilen verticalmente*/
 @media (max-width: 768px) {
     .cuerpo {
         flex-direction: column;

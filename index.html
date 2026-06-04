@@ -4,19 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Web en PX - 4 botones</title>
-    <!--
-        EXPLICACIÓN FLEX — NAV con 4 botones (nav-4)
-        Todos los botones parten del mismo flex-basis: 241px.
-        4 × 241px = 964px, que es menor que el contenedor (1200px).
-        Espacio sobrante: 1200 - 964 = 236px.
-
-        flex-grow determina cuánto del sobrante recibe cada caja:
-          · "Inicio": flex-grow 3  → recibe 3/6 del sobrante = 118px → ancho final ≈ 359px
-          · Resto (×3): flex-grow 1 cada una → reciben 1/6 = ≈39px → ancho final ≈ 280px
-
-        Resultado: los 4 botones llenan el nav sin desbordarlo.
-        Al pulsar "Inicio" se navega a index2.html, donde aparece el botón "Contacto".
-    -->
     <link rel="stylesheet" href="estilos-px.css">
 </head>
 <body>
@@ -25,7 +12,19 @@
             <img class="logo" src="imagenes/material.png" alt="Logo">
             <h1>Mi Web</h1>
         </header>
+        <!--
+            EXPLICACIÓN FLEX — NAV con 4 botones (nav-4)
+            Todos los botones parten del mismo flex-basis: 241px.
+            4 × 241px = 964px, que es menor que el contenedor (1200px).
+            Espacio sobrante: 1200 - 964 = 236px.
 
+            flex-grow determina cuánto del sobrante recibe cada caja:
+              · "Inicio": flex-grow 3  → recibe 3/6 del sobrante = 118px → ancho final ≈ 359px
+              · Resto (×3): flex-grow 1 cada una → reciben 1/6 = ≈39px → ancho final ≈ 280px
+
+            Resultado: los 4 botones llenan el nav sin desbordarlo.
+            Al pulsar "Inicio" se navega a index2.html, donde aparece el botón "Contacto".
+        -->
         <nav class="nav-4">
             <a href="index2.html" class="boton inicio">Inicio</a>
             <a href="#" class="boton">Nosotros</a>
