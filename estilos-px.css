@@ -125,14 +125,14 @@ footer {
     background-color: #e6e6f7;
 }
 
-/* Pantallas menores de 1200px: el contenedor pasa a ocupar el 100% del viewport */
+/* Pantallas mas pequeñas de 1200px: el contenedor pasa a ocupar el 100% del viewport */
 @media (max-width: 1200px) {
     .contenedor {
         width: 100%;
     }
 }
 
-/* Pantallas menores de 768px: aside y main pasan a columna */
+/* Pantallas mas pequeñas de 768px: aside y main pasan a columna */
 @media (max-width: 768px) {
     .cuerpo {
         flex-direction: column;
